@@ -37,9 +37,17 @@ st.write("")
 # =====================
 # === LOAD MODEL ===
 # =====================
-file = ("obesity_model.sav", "rb")
-saved = pickle.load(file)
+try:
+    with open("obesity_model.sav", "rb") as file:
+        saved = pickle.load(file)
+except FileNotFoundError:
+    st.error("❌ File 'obesity_model.sav' tidak ditemukan. Jalankan dulu training model.")
+    st.stop()
+except Exception as e:
+    st.error(f"Terjadi kesalahan saat memuat model: {e}")
+    st.stop()
 
+# semua variabel model diinisialisasi di luar blok try
 model = saved["model"]
 scaler = saved["scaler"]
 columns = saved["columns"]
