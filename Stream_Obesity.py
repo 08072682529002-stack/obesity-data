@@ -11,7 +11,7 @@ import pandas as pd
 # =====================
 # === KONFIGURASI UI ===
 # =====================
-st.set_page_config(page_title="Obesity Prediction App", page_icon="💖", layout="wide")
+st.set_page_config(page_title="Obesity Prediction App", page_icon="🩺", layout="wide")
 
 st.markdown("""
     <style>
@@ -147,7 +147,7 @@ if st.button("🔍 Prediksi Kategori Obesitas"):
 
         st.markdown("---")
         st.markdown(
-            f"<h3 style='text-align:center; color:##1e3a8a;'>💫 Hasil Prediksi: "
+            f"<h3 style='text-align:center; color:##1e3a8a;'>➡️ Hasil Prediksi: "
             f"<span style='color:#2563eb;'> {pred_label}</span></h3>",
             unsafe_allow_html=True
         )
