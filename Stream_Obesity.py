@@ -40,7 +40,6 @@ st.write("")
 try:
     with open("obesity_model.sav", "rb") as file:
         saved = pickle.load(file)
-except FileNotFoundError:
 
 model = saved["model"]
 scaler = saved["scaler"]
