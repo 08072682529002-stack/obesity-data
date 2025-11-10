@@ -34,20 +34,6 @@ st.markdown("""
 st.markdown("<div class='header'><h1>Prediksi Tingkat Obesitas</h1><p>Prediksi Kategori Obesitas Berdasarkan Pola Hidup</p></div>", unsafe_allow_html=True)
 st.write("")
 
-# =====================
-# === LOAD MODEL ===
-# =====================
-open("obesity_model.sav", "rb") as file:
-saved = pickle.load(file)
-model = saved["model"]
-scaler = saved["scaler"]
-columns = saved["columns"]
-label_encoders = saved["label_encoders"]
-target_col = saved.get("target", "ObesityCategory")
-
-# =====================
-# === INPUT DATA ===
-# =====================
 st.markdown("### 🔢 Masukkan Data Pasien di Bawah Ini")
 
 input_values = {}
