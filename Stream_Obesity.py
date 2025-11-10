@@ -98,7 +98,7 @@ for i, col in enumerate(columns):
     if col in label_encoders:
         le = label_encoders[col]
         classes = list(le.classes_)
-        options = classes + ["Type manually"]
+        options = classes
 
         with container:
             choice = st.selectbox(f"{col}", options, index=0, key=f"sel_{col}")
@@ -147,8 +147,8 @@ if st.button("🔍 Prediksi Kategori Obesitas"):
 
         st.markdown("---")
         st.markdown(
-            f"<h3 style='text-align:center; color:#a21caf;'>💫 Hasil Prediksi: "
-            f"<span style='color:#ec4899;'>Kategori Obesitas = {pred_label}</span></h3>",
+            f"<h3 style='text-align:center; color:##1e3a8a;'>💫 Hasil Prediksi: "
+            f"<span style='color:#2563eb;'> {pred_label}</span></h3>",
             unsafe_allow_html=True
         )
         st.balloons()
