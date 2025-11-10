@@ -40,17 +40,12 @@ st.write("")
 try:
     with open("obesity_model.sav", "rb") as file:
         saved = pickle.load(file)
-except FileNotFoundError:
-    st.error()
-    st.stop()
 
 model = saved["model"]
 scaler = saved["scaler"]
 columns = saved["columns"]
 label_encoders = saved["label_encoders"]
 target_col = saved.get("target", "ObesityCategory")
-
-st.success()
 
 # =====================
 # === INPUT DATA ===
