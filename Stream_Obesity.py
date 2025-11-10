@@ -15,18 +15,46 @@ st.set_page_config(page_title="Obesity Prediction App", page_icon="💖", layout
 
 st.markdown("""
     <style>
-        body {background-color: #fef6fb; font-family: 'Poppins', sans-serif;}
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Poppins', sans-serif;
+        }
         .header {
-            background: linear-gradient(90deg,#f9a8d4,#c084fc);
-            padding:18px; border-radius:12px; color:white; text-align:center;
+            background: linear-gradient(90deg, #60a5fa, #2563eb);
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 18px;
+            margin: 0;
         }
         .stButton>button {
-            background: linear-gradient(90deg,#ec4899,#a855f7);
-            color:white; border:none; border-radius:10px; padding:0.6em 2em;
-            font-size:17px; font-weight:600; transition:0.3s;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.6em 2em;
+            font-size: 17px;
+            font-weight: 600;
+            transition: 0.3s;
         }
         .stButton>button:hover {
-            transform:scale(1.05); background:linear-gradient(90deg,#a855f7,#ec4899);
+            transform: scale(1.05);
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            font-size: 14px;
         }
     </style>
 """, unsafe_allow_html=True)
