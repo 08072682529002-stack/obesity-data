@@ -37,7 +37,7 @@ st.write("")
 # =====================
 # === LOAD MODEL ===
 # =====================
-open("obesity_model.sav", "rb")
+file = ("obesity_model.sav", "rb")
 saved = pickle.load(file)
 
 model = saved["model"]
